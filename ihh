@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Car Rental</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">CarRental</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Our Cars</a></li>
+                <li><a href="#address">Address</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section with 3D Animation -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Modern Car Rental</h1>
+            <p>Rent the best cars for your adventures. Experience luxury on wheels.</p>
+            <a href="#cars" class="btn">Explore Cars</a>
+        </div>
+        <div id="3d-container"></div> <!-- Container for Three.js 3D scene -->
+    </section>
+
+    <!-- Our Cars Section -->
+    <section id="cars" class="cars-section">
+        <h2>Our Cars</h2>
+        <div class="cars-grid">
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?w=400" alt="Luxury Sedan">
+                <h3>Luxury Sedan</h3>
+                <p class="price">$50/day</p>
+                <p>Comfortable and stylish for city drives. Perfect for business trips.</p>
+            </div>
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="SUV Adventure">
+                <h3>SUV Adventure</h3>
+                <p class="price">$70/day</p>
+                <p>Ideal for off-road and family outings. Spacious and powerful.</p>
+            </div>
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400" alt="Sports Car">
+                <h3>Sports Car</h3>
+                <p class="price">$100/day</p>
+                <p>High-performance thrill. Experience speed and elegance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Address Section -->
+    <section id="address" class="address-section">
+        <h2>Visit Us</h2>
+        <p>Located in the heart of Casablanca, Morocco.</p>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789012!2d-7.589843!3d33.573110!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdadbf4f4f4f4f4f%3A0x123456789abcdef!2sCasablanca%2C%20Morocco!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><strong>Phone:</strong> +212 6 12 34 56 78</p>
+            <p><strong>Email:</strong> info@carrental.com</p>
+        </div>
+        <form id="contact-form" class="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Modern Car Rental. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
