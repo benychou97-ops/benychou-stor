@@ -95,3 +95,342 @@
     <script src="script.js"></script>
 </body>
 </html>
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 50%;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #ffd700;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffed4e;
+}
+
+#3d-container {
+    width: 50%;
+    height: 400px;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Cars Section */
+.cars-section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cars-section h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.car-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-card h3 {
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.price {
+    color: #007bff;
+    font-weight: bold;
+    margin: 0 1rem;
+}
+
+.car-card p {
+    margin: 1rem;
+}
+
+/* Address Section */
+.address-section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #e9ecef;
+}
+
+.address-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.map-container {
+    margin-top: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.contact-info {
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 4rem 1rem;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    #3d-container {
+        width: 100%;
+        height: 300px;
+        margin-top: 2rem;
+    }
+    .nav-links {
+        display: none; /* Simple hide for mobile; add hamburger menu if needed */
+    }
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+}// script.js - Handles Three.js 3D animation and contact form
+
+// Three.js 3D Car Animation
+document.addEventListener('DOMContentLoaded', () => {
+    // Create scene, camera, and renderer
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(400, 400); // Size for the container
+    document.getElementById('3d-container').appendChild(renderer.domElement);
+
+    // Create a simple car model (box for body, cylinders for wheels)
+    const carGroup = new THREE.Group();
+
+    // Car body
+    const bodyGeometry = new THREE.BoxGeometry(2, 0.5, 1);
+    const bodyMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
+    const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+    carGroup.add(body);
+
+    // Wheels (4 cylinders)
+    const wheelGeometry = new THREE.CylinderGeometry(0.2, 0.2, 0.1, 16);
+    const wheelMaterial = new THREE.MeshLambertMaterial({ color: 0x333333 });
+    const positions = [
+        [-0.8, -0.3, 0.4], [0.8, -0.3, 0.4], [-0.8, -0.3, -0.4], [0.8, -0.3, -0.4]
+    ];
+    positions.forEach(pos => {
+        const wheel = new THREE.Mesh(wheelGeometry, wheelMaterial);
+        wheel.position.set(...pos);
+        wheel.rotation.z = Math.PI / 2;
+        carGroup.add(wheel);
+    });
+
+    scene.add(carGroup);
+
+    // Lighting
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    directionalLight.position.set(1, 1, 1);
+    scene.add(directionalLight);
+
+    // Camera position
+    camera.position.z = 5;
+
+    // Animation loop
+    function animate() {
+        requestAnimationFrame(animate);
+        carGroup.rotation.y += 0.01; // Rotate the car
+        renderer.render(scene, camera);
+    }
+    animate();
+
+    // Handle window resize for responsiveness
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+});
+
+// Contact Form Handling
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Basic validation
+    if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    // Simulate form submission (replace with actual backend call)
+    alert(`Thank you, ${name}! Your message has been sent.`);
+    
+    // Clear form
+    document.getElementById('contact-form').reset();
+});
